@@ -3,9 +3,9 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
-      <section>
+      <section className="flex">
         <div className="container">
-          
+        
         </div>
       </section>
     </div>
