@@ -1,13 +1,29 @@
-import React from 'react'
-import '../App.css'
+import React, { useState } from 'react'
+// import './App.css'
 
 const CreateCourse = () => {
+  const [course, setCourse] = useState({
+    nama_kursus:'',
+    tipe_kursus:'',
+    durasi_kursus:'',
+    aksen_kursus:'',
+  })
+
+  const handleSubmit = () => {
+    console.log('submit')
+  }
+
+  const handleInputChange = (name, value) => {
+    setCourse({ ...course, [name]: value });
+  };
+
+  console.log(course)
 
   return (
     <div>
         <div className="container mx-auto p-4">
         <h1 className="text-2xl font-bold mb-4">Tambah Data Kursus</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="nama_kursus" className="block font-semibold">Nama Kursus</label>
             <input
@@ -16,8 +32,8 @@ const CreateCourse = () => {
               id="nama_kursus"
               name="nama_kursus"
               placeholder="Masukkan Nama Kursus"
-              value={this.state.nama_kursus}
-              onChange={this.handleInputChange}
+              value={course.nama_kursus}
+              onChange={(e) => handleInputChange('nama_kursus',e.target.value)}
             />
           </div>
           <div className="mb-4">
@@ -26,9 +42,10 @@ const CreateCourse = () => {
               className="w-full p-2 border border-gray-300 rounded"
               id="tipe_kursus"
               name="tipe_kursus"
-              value={this.state.tipe_kursus}
-              onChange={this.handleInputChange}
+              value={course.tipe_kursus}
+              onChange={(e) => handleInputChange('tipe_kursus',e.target.value)}
             >
+              <option value="">pilih tipe</option>
               <option value="online">Online</option>
               <option value="offline">Offline</option>
             </select>
@@ -39,8 +56,8 @@ const CreateCourse = () => {
               className="w-full p-2 border border-gray-300 rounded"
               id="durasi_kursus"
               name="durasi_kursus"
-              value={this.state.durasi_kursus}
-              onChange={this.handleInputChange}
+              value={course.durasi_kursus}
+              onChange={(e) => handleInputChange('durasi_kursus',e.target.value)}
             >
               <option value="1 bulan">1 Bulan</option>
               <option value="3 bulan">3 Bulan</option>
@@ -49,22 +66,9 @@ const CreateCourse = () => {
             </select>
           </div>
           <div className="mb-4">
-            <label htmlFor="fasilitas_kursus" className="block font-semibold">Fasilitas Kursus</label>
+            {/* <label htmlFor="fasilitas_kursus" className="block font-semibold">Fasilitas Kursus</label> */}
             <div>
-              {this.state.fasilitas_kursus.map((fasilitas, index) => (
-                <div key={index} className="flex items-center">
-                  <input
-                    type="checkbox"
-                    className="form-checkbox"
-                    id={`fasilitas_kursus${index}`}
-                    name="fasilitas_kursus[]"
-                    value={fasilitas}
-                    checked={this.state.fasilitas_kursus.includes(fasilitas)}
-                    onChange={this.handleInputChange}
-                  />
-                  <label htmlFor={`fasilitas_kursus${index}`}>{fasilitas}</label>
-                </div>
-              ))}
+              
             </div>
           </div>
           <div className="mb-4">
@@ -73,8 +77,8 @@ const CreateCourse = () => {
               className="w-full p-2 border border-gray-300 rounded"
               id="aksen_kursus"
               name="aksen_kursus"
-              value={this.state.aksen_kursus}
-              onChange={this.handleInputChange}
+              value={course.aksen_kursus}
+              onChange={(e) => handleInputChange('aksen_kursus',e.target.value)}
             >
               <option value="Inggris">Inggris</option>
               <option value="Jepang">Jepang</option>
