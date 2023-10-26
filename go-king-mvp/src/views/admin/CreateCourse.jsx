@@ -3,10 +3,12 @@ import React, { useState } from 'react'
 
 const CreateCourse = () => {
   const [course, setCourse] = useState({
-    nama_kursus:'',
-    tipe_kursus:'',
-    durasi_kursus:'',
-    aksen_kursus:'',
+    title:'',
+    type:'',
+    duration:'',
+    accent:'',
+    facility:'',
+    description:'',
   })
 
   const handleSubmit = () => {
@@ -25,25 +27,25 @@ const CreateCourse = () => {
         <h1 className="text-2xl font-bold mb-4">Tambah Data Kursus</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="nama_kursus" className="block font-semibold">Nama Kursus</label>
+            <label htmlFor="title" className="block font-semibold">Nama Kursus</label>
             <input
               type="text"
               className="w-full p-2 border border-gray-300 rounded"
-              id="nama_kursus"
-              name="nama_kursus"
+              id="title"
+              name="title"
               placeholder="Masukkan Nama Kursus"
-              value={course.nama_kursus}
-              onChange={(e) => handleInputChange('nama_kursus',e.target.value)}
+              value={course.title}
+              onChange={(e) => handleInputChange('title',e.target.value)}
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="tipe_kursus" className="block font-semibold">Tipe Kursus</label>
+            <label htmlFor="type" className="block font-semibold">Tipe Kursus</label>
             <select
               className="w-full p-2 border border-gray-300 rounded"
-              id="tipe_kursus"
-              name="tipe_kursus"
-              value={course.tipe_kursus}
-              onChange={(e) => handleInputChange('tipe_kursus',e.target.value)}
+              id="type"
+              name="type"
+              value={course.type}
+              onChange={(e) => handleInputChange('type',e.target.value)}
             >
               <option value="">pilih tipe</option>
               <option value="online">Online</option>
@@ -51,13 +53,13 @@ const CreateCourse = () => {
             </select>
           </div>
           <div className="mb-4">
-            <label htmlFor="durasi_kursus" className="block font-semibold">Durasi Kursus</label>
+            <label htmlFor="duration" className="block font-semibold">Durasi Kursus</label>
             <select
               className="w-full p-2 border border-gray-300 rounded"
-              id="durasi_kursus"
-              name="durasi_kursus"
-              value={course.durasi_kursus}
-              onChange={(e) => handleInputChange('durasi_kursus',e.target.value)}
+              id="duration"
+              name="duration"
+              value={course.duration}
+              onChange={(e) => handleInputChange('duration',e.target.value)}
             >
               <option value="1 bulan">1 Bulan</option>
               <option value="3 bulan">3 Bulan</option>
