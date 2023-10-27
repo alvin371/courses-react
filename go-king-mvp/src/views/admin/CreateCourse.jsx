@@ -22,12 +22,12 @@ const CreateCourse = () => {
   console.log(course)
 
   return (
-    <div className="bg-emerald-100 text-stone-800">
-      <div className="container mx-auto p-4">
+    <div className="w-full h-screen bg-emerald-100 text-stone-800">
+      <div className="container h-full m-auto p-4 flex flex-col justify-center">
         <h1 className="text-2xl font-bold mb-4">Tambah Data Kursus</h1>
         <div>
           <form onSubmit={handleSubmit}>
-            <div className="mb-4">
+            <div className="w-2/4 mb-4">
               <label htmlFor="title" className="block font-semibold">Nama Kursus</label>
               <input
                 type="text"
@@ -39,7 +39,7 @@ const CreateCourse = () => {
                 onChange={(e) => handleInputChange('title', e.target.value)}
               />
             </div>
-            <div className="mb-4">
+            <div className="w-2/4 mb-4">
               <label htmlFor="type" className="block font-semibold">Tipe Kursus</label>
               <select
                 className="w-full p-2 border bg-slate-50 border-gray-300 rounded"
@@ -54,7 +54,7 @@ const CreateCourse = () => {
                 <option value="BASIC">BASIC</option>
               </select>
             </div>
-            <div className="mb-4">
+            <div className=" w-2/4 mb-4">
               <label htmlFor="duration" className="block font-semibold">Durasi Kursus</label>
               <select
                 className="w-full p-2 border bg-slate-50 border-gray-300 rounded"
@@ -70,7 +70,7 @@ const CreateCourse = () => {
                 <option value="6 bulan">6 Bulan</option>
               </select>
             </div>
-            <div className="mb-4">
+            <div className="w-2/4 mb-4">
               <label htmlFor="facility" className="block font-semibold">Fasilitas Kursus</label>
               <div>
                 <select
@@ -86,7 +86,7 @@ const CreateCourse = () => {
                 </select>
               </div>
             </div>
-            <div className="mb-4">
+            <div className="w-2/4 mb-4">
               <label htmlFor="aksen_kursus" className="block font-semibold">Aksen Kursus</label>
               <select
                 className="w-full p-2 border bg-slate-50 border-gray-300 rounded"
@@ -102,7 +102,7 @@ const CreateCourse = () => {
                 <option value="Mandarin">Mandarin</option>
               </select>
             </div>
-            <div className="mb-4">
+            <div className="w-2/4 mb-4">
               <label htmlFor="contact" className="block font-semibold">Nomor WhatsApp Kursus</label>
               <input
                 type="text"
