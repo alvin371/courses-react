@@ -3,11 +3,11 @@ import Navbar from '../components/Navbar'
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-emerald-100 text-stone-800">
       <Navbar/>
       <section className="flex">
         <div className="container">
-        <h1>Going to Kampung Inggris</h1>
+        <h1 className="text">Going to Kampung Inggris</h1>
         <p>Membantu kamu untuk menemukan kursus di Kampung Inggris Pare yang sesuai dengan preferensimu</p>
         </div>
         <div className="container-right">
@@ -15,7 +15,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="Fitur - Fitur">
+      <section className="">
           <h1>Features</h1>
           <div>
             <div id="courses">

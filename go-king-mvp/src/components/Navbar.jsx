@@ -13,7 +13,7 @@ const Navbar = () => {
               <p>About Us</p>
               <p>FaQs</p>
               <div>
-                <button className='bg-Emerald-600 hover:bg-Emerald-700 text-white'>Cari Kursus</button>
+                <button className='bg-emerald-600 hover:bg-emerald-700 text-white'>Cari Kursus</button>
               </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-DOM'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './views/App.css'
 
 import Home from './views/Home'
