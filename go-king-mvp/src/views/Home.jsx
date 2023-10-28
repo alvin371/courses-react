@@ -40,10 +40,14 @@ const Home = () => {
 
       <section>
         <div className="partner-container flex">
-          <h3>Our Partner</h3>
+          <div>
+          <h1>Our Partner</h1>
+          </div>
+          <div>
           <img src="/Access.png" alt="Access" />
           <img src="/brilliant.png" alt="Brilliant" />
           <img src="/globalenglish.png" alt="GE" />
+          </div>
         </div>
       </section>
 

@@ -27,7 +27,6 @@ const LoginAdmin = () => {
 
   useEffect(() => {
     if (isLoggedIn) {
-      // redirect to home page
     }
   }, [isLoggedIn]);
 

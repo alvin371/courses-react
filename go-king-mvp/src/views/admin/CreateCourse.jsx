@@ -1,4 +1,7 @@
+import axios from 'axios'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { API_URL } from '../../data/config'
 
 const CreateCourse = () => {
   const [course, setCourse] = useState({
@@ -11,8 +14,15 @@ const CreateCourse = () => {
     contact: '',
   })
 
+  const navigate = useNavigate()
+
   const handleSubmit = () => {
-    console.log('submit')
+    axios.post(`${API_URL}courses`, course).then((res) =>{
+      console.log(res)
+      navigate('/list-course')
+    }).catch((err) => {
+      console.error(err);
+    })
   }
 
   const handleInputChange = (name, value) => {
@@ -24,8 +34,10 @@ const CreateCourse = () => {
   return (
     <div className="w-full h-screen bg-emerald-100 text-stone-800">
       <div className="container h-full m-auto p-4 flex flex-col justify-center">
-
-        <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center">
+        <form onSubmit={(e) => {
+          e.preventDefault()
+          handleSubmit()}}
+          className="flex flex-col justify-center items-center">
           <h1 className="text-2xl font-bold mb-4">Tambah Data Kursus</h1>
           <div className="w-2/4 mb-4">
             <label htmlFor="title" className="block font-semibold">Nama Kursus</label>
@@ -87,13 +99,13 @@ const CreateCourse = () => {
             </div>
           </div>
           <div className="w-2/4 mb-4">
-            <label htmlFor="aksen_kursus" className="block font-semibold">Aksen Kursus</label>
+            <label htmlFor="accent" className="block font-semibold">Aksen Kursus</label>
             <select
               className="w-full p-2 border bg-slate-50 border-gray-300 rounded"
-              id="aksen_kursus"
-              name="aksen_kursus"
-              value={course.aksen_kursus}
-              onChange={(e) => handleInputChange('aksen_kursus', e.target.value)}
+              id="accent"
+              name="accent"
+              value={course.accent}
+              onChange={(e) => handleInputChange('accent', e.target.value)}
             >
               <option value="">Pilih Aksen</option>
               <option value="Inggris">Inggris</option>

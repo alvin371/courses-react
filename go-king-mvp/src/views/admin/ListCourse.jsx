@@ -23,9 +23,9 @@ const ListCourse = () => {
                 </div>
             </div>
 
-            <div className="container-right">
+            <div className="container-right text-gray-800">
                 <div>
-                    <h1 className="text-gray-800">Daftar Kursus</h1>
+                    <h1 className="">Daftar Kursus</h1>
                     <div>
                         <table className="table-auto">
                             <thead>
