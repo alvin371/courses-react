@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import loginChecker from '../../utils/LoginChecker'
+import { useNavigate } from 'react-router-dom'
 
 const ListCourse = () => {
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        const isLoggedIn = loginChecker()
+        if (!isLoggedIn) navigate('/login-admin')
+    }, [])
+
     return (
         <div className="bg-emerald-100 flex">
             <div className="container-left">

@@ -1,7 +1,8 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { API_URL } from '../../data/config'
+import loginChecker from '../../utils/LoginChecker'
 
 const CreateCourse = () => {
   const [course, setCourse] = useState({
@@ -15,6 +16,11 @@ const CreateCourse = () => {
   })
 
   const navigate = useNavigate()
+
+    useEffect(() => {
+        const isLoggedIn = loginChecker()
+        if (!isLoggedIn) navigate('/login-admin')
+    }, [])
 
   const handleSubmit = () => {
     axios.post(`${API_URL}courses`, course).then((res) =>{
