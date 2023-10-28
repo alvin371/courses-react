@@ -5,13 +5,14 @@ const Home = () => {
   return (
     <div className="bg-emerald-100 text-stone-800">
       <Navbar/>
-      <section className="flex">
-        <div className="container">
-        <h1 className="text">Going to Kampung Inggris</h1>
+      <section className="flex flex-row items-center justify-center gap-8 m-auto w-full max-w-screen-xl">
+        <div className="w-full ml-8">
+        <h1 className="text font-bold">Going to Kampung Inggris</h1>
         <p>Membantu kamu untuk menemukan kursus di Kampung Inggris Pare yang sesuai dengan preferensimu</p>
         </div>
-        <div className="container-right">
-          <img src="/English.png" alt="Hero-section-logo" />
+        <div className="w-full">
+          <img src="/English.png" alt="Hero-section-logo"
+          className="w-full" />
         </div>
       </section>
 

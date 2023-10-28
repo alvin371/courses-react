@@ -114,6 +114,7 @@ const CreateCourse = () => {
               <option value="Mandarin">Mandarin</option>
             </select>
           </div>
+
           <div className="w-2/4 mb-4">
             <label htmlFor="contact" className="block font-semibold">Nomor WhatsApp Kursus</label>
             <input
@@ -128,7 +129,6 @@ const CreateCourse = () => {
           </div>
           <button className="mt-4 w-2/4 bg-emerald-600 text-white p-2 rounded hover:bg-emerald-700">Simpan</button>
         </form>
-
       </div>
     </div>
   );
