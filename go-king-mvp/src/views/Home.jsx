@@ -39,11 +39,11 @@ const Home = () => {
       </section>
 
       <section>
-        <div className="partner-container">
+        <div className="partner-container flex">
           <h3>Our Partner</h3>
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+          <img src="/Access.png" alt="Access" />
+          <img src="/brilliant.png" alt="Brilliant" />
+          <img src="/globalenglish.png" alt="GE" />
         </div>
       </section>
 
